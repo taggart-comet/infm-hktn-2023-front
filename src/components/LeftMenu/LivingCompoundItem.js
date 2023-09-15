@@ -1,10 +1,9 @@
 import React from "react";
-import {makeStyles} from "@material-ui/core";
 
-function LivingCompoundItem({ compound }) {
+function LivingCompoundItem({ compound, onClick }) {
     return (
-        <div key={compound.Id} className="living-compound-item">
-            <img src={`https://uznai.mos.ru/_next/image?url=%2Fimages%2Fuploaded%2F${compound.Img}&w=1920&q=75`} alt={`${compound.Name}`} />
+        <div className="living-compound-item" onClick={() => onClick(compound)}>
+            <img src={`https://uznai.mos.ru/_next/image?url=%2Fimages%2Fuploaded%2F${compound.Img}&w=1920&q=75`} alt={`${compound.Name}`} loading="lazy" />
             <div className="info">
                 <h4 className="title">{compound.Name}</h4>
                 <div className="metro">

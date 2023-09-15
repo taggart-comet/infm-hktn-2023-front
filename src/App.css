@@ -103,6 +103,15 @@
   font-weight: bold;
   margin-left: 10px;
 }
+.left-menu-header-title-back {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.left-menu-header-title-back:hover {
+  color: #008aed;
+}
 
 .left-menu-items {
   height: 100%; /* or set a max-height */
@@ -128,10 +137,12 @@
   height: 50px; /* Adjust as necessary */
   margin-right: 10px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .living-compound-item .info {
   flex: 1;
+  cursor: pointer;
 }
 
 .living-compound-item .info .title {
@@ -148,4 +159,73 @@
   margin-left: 10px;
   font-size: 18px;
   font-family: Arial;
+}
+
+.living-compound-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.living-compound-info img {
+  width: 90px; /* Adjust as necessary */
+  height: 60px; /* Adjust as necessary */
+  margin-right: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.living-compound-info .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.living-compound-info .info .title {
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-size: 20px;
+}
+.living-compound-info .score {
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: Arial;
+}
+
+.living-compound-info .info .metro {
+  padding: 5px;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.living-compound-info .image-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.living-compound-info .criteria-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.living-compound-info .criteria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.living-compound-info .criteria .criteria-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 70%;
+}
+.show-ads-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
