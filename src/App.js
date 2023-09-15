@@ -19,7 +19,7 @@ function App() {
                 "Metro": "Красная поляна",
                 "Address": "улица Врубеля, к4 стр",
                 "Img": "jks/1967590/фото3.jpg",
-                "Score": 36,
+                "Score": "9.9",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -34,28 +34,6 @@ function App() {
                 ]
             },
             {
-                "Id": 3,
-                "Name": "Квартал Марьино",
-                "Latitude": 37.304406,
-                "Longitude": 55.549153,
-                "Metro": "Сказочная",
-                "Address": "Квартал № 175",
-                "Img": "jks/4262586/kvartal_marino_3.jpg",
-                "Score": 34,
-                "criteriaScore": [
-                    {
-                        "criteriaId": 1,
-                        "criteriaName": "мфц",
-                        "criteriaValue": 0
-                    },
-                    {
-                        "criteriaId": 2,
-                        "criteriaName": "метро",
-                        "criteriaValue": 0
-                    }
-                ]
-            },
-            {
                 "Id": 4,
                 "Name": "Огни",
                 "Latitude": 37.474259,
@@ -63,29 +41,7 @@ function App() {
                 "Address": "улица Лобачевского",
                 "Metro": "Ленинская",
                 "Img": "jks/49134/фото5.png",
-                "Score": 33,
-                "criteriaScore": [
-                    {
-                        "criteriaId": 1,
-                        "criteriaName": "мфц",
-                        "criteriaValue": 0
-                    },
-                    {
-                        "criteriaId": 2,
-                        "criteriaName": "метро",
-                        "criteriaValue": 0
-                    }
-                ]
-            },
-            {
-                "Id": 5,
-                "Name": "Moments (Моментс)",
-                "Latitude": 37.483132,
-                "Longitude": 55.813353,
-                "Address": "Волоколамское шоссе, 28",
-                "Metro": "Киевская",
-                "Img": "jks/4127909/moments_2.jpg",
-                "Score": 29,
+                "Score": "9.8",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -107,7 +63,7 @@ function App() {
                 "Address": "улица Александровка",
                 "Metro": "Путинский вокзал",
                 "Img": "jks/4115687/wellbe_2.jpg",
-                "Score": 27,
+                "Score": "9.8",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -129,7 +85,7 @@ function App() {
                 "Address": "Серебряническая набережная",
                 "Metro": "Полянка",
                 "Img": "jks/300653/фото1.jpg",
-                "Score": 0,
+                "Score": "9.8",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -151,7 +107,7 @@ function App() {
                 "Address": "Складочная улица",
                 "Metro": "Полянка",
                 "Img": "jks/49361/фото3.jpg",
-                "Score": 0,
+                "Score": "9.7",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -173,7 +129,7 @@ function App() {
                 "Address": "Малая Почтовая улица",
                 "Metro": "Пшеничная",
                 "Img": "jks/3401527/mypriority_basmanny_img_001.jpg",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -195,7 +151,7 @@ function App() {
                 "Address": "улица Бориса Пастернака",
                 "Metro": "Брусника",
                 "Img": "jks/1287/gorodpark-peredelkino-blizhnee-moskva-jk-587793814-10.jpg",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -217,7 +173,7 @@ function App() {
                 "Address": "Старомонетный переулок, 19/11с1",
                 "Metro": "Самолетная",
                 "Img": "jks/3419909/armani_casa_img_001.jpg",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -239,7 +195,7 @@ function App() {
                 "Address": "Автозаводская, 23 ст120 к5",
                 "Metro": "Пшеничная",
                 "Img": "jks/8787/фото2.jpg",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -261,7 +217,7 @@ function App() {
                 "Address": "улица Кузнецкий Мост, 12",
                 "Metro": "Пшеничная",
                 "Img": "jks/49514/kuznetsky_most_12_by_lalique_moskva_jk_1425339033_10.jpg",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -283,7 +239,7 @@ function App() {
                 "Address": "Молодогвардейская улица",
                 "Metro": "Пшеничная",
                 "Img": "jks/50029/ФОТО1.png",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
@@ -305,7 +261,7 @@ function App() {
                 "Address": "Мантулинская улица, вл7",
                 "Metro": "Пшеничная",
                 "Img": "jks/19492/фото13.png",
-                "Score": 0,
+                "Score": "9.5",
                 "criteriaScore": [
                     {
                         "criteriaId": 1,
