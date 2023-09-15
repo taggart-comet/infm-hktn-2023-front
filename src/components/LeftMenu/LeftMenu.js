@@ -37,10 +37,10 @@ function LeftMenu({ livingCompounds }) {
             <div className="left-menu-header">
                 {selectedCompound ? (
                         <div className="left-menu-header-title-back" onClick={goBack}>
-                            <i className="fas fa-arrow-left" style={{marginRight: 0.5 + 'em'}}></i>Жилые комплексы
+                            <i className="fas fa-arrow-left" style={{marginRight: 0.5 + 'em'}}></i>Рейтинг ЖК
                         </div>
                 ) : (
-                        <div className="left-menu-header-title">Жилые комплексы</div>
+                        <div className="left-menu-header-title">Рейтинг ЖК</div>
                 )}
                 <RatingSetupButton/>
             </div>

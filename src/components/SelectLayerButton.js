@@ -3,18 +3,25 @@ import { Button, Popover, List, ListItem, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     customButton: {
-        padding: '5px 12px 5px 12px',
+        padding: '4px 16px 4px 12px',
         backgroundColor: 'white',
-        border: '0px solid #ccc',
-        borderRadius: 7,
-        boxShadow: '0 2px 3px 2px rgba(0, 0, 0, .3)',
+        borderWidth: '1px',
+        borderColor: 'rgb(204, 204, 204)',
+        outline: "none",
+        borderRadius: '6px',
+        borderStyle: 'solid',
+        boxShadow: '0 0',
         fontFamily: "Arial, 'Helvetica Neue', Helvetica, sans-serif",
         textTransform: 'none',
         fontSize: 14,
         color: 'black',
         '&:hover': {
             backgroundColor: '#f0f0f0',
+            boxShadow: '0 0',
         },
+    },
+    customPopover: {
+        boxShadow: '0 0',
     },
 }))
 
