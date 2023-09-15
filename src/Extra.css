@@ -1,0 +1,8 @@
+.click-button-infm {
+  box-shadow: 0 0;
+}
+
+.MuiPopover-paper {
+  box-shadow: 0 0!important;
+  border: solid 1px rgb(204, 204, 204)!important;
+}
