@@ -1,0 +1,133 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../public/avito_screen.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.avito-header {
+  width: 100%;
+  height: 130px;
+}
+
+.avito-map-area {
+  display: flex;
+  flex: 1;
+}
+
+.avito-map-left-menu-area {
+  position: absolute;
+  width: 30%;
+}
+
+.avito-map-work-area {
+  padding-top: 130px;
+  position: absolute;
+  width: 100%;
+}
+
+.avito-map-work-area-tools {
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+  padding: 8px;
+}
+
+.avito-map-work-area-tools > div,
+.avito-map-work-area-tools > .SelectLayerButton {
+  min-width: 62px;
+  margin-left: 12px; /* Adds some space between the items */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.left-menu-header {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-menu-header-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.left-menu-items {
+  height: 100%; /* or set a max-height */
+  overflow-y: auto;
+  padding: 25px;
+}
+
+.living-compounds-container {
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.living-compound-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.living-compound-item img {
+  width: 50px; /* Adjust as necessary */
+  height: 50px; /* Adjust as necessary */
+  margin-right: 10px;
+}
+
+.living-compound-item .info {
+  flex: 1;
+}
+
+.living-compound-item .info .title {
+  margin-bottom: 5px;
+}
+
+.living-compound-item .score {
+  margin-left: 10px;
+}
