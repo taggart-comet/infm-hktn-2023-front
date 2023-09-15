@@ -3,7 +3,6 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-image: url('../public/avito_screen.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,11 +10,21 @@
 
 .avito-header {
   width: 100%;
+  /*height:auto;*/
+  background-image: url('../public/avito-header-fixed.png');
   height: 130px;
+  background-size: cover;  /* Растягивает изображение так, чтобы оно заполнило всю область, сохраняя пропорции */
+  background-position: center;  /* Выравнивает изображение по центру */
+  background-repeat: no-repeat;  /* Убирает повторение изображения */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .avito-map-area {
   display: flex;
+  background-image: url('../public/avito-map-background.png');
+  background-size: cover;  /* Растягивает изображение так, чтобы оно заполнило всю область, сохраняя пропорции */
+  background-position: center;  /* Выравнивает изображение по центру */
+  background-repeat: no-repeat;  /* Убирает повторение изображения */
   flex: 1;
 }
 
