@@ -6,3 +6,31 @@
   box-shadow: 0 0!important;
   border: solid 1px rgb(204, 204, 204)!important;
 }
+
+.list-item {
+  display: flex;
+  align-items: center;
+  background-color: #fcfcfc;
+  padding: 12px 24px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.list-title {
+  flex-grow: 1;
+  font-weight: bold;
+  color: #333;
+}
+
+.list-divider {
+  margin: 0 12px;
+  color: #aaa;
+}
+
+.list-count {
+  margin: auto 0;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #008000;  /* Вы можете выбрать другой цвет, если хотите */
+}
