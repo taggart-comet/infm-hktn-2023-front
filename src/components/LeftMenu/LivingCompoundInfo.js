@@ -46,9 +46,10 @@ function LivingCompoundInfo({ compound }) {
                 </div>
                 <div className="criteria-list">
                     {compound.criteriaScore.map(criteria => (
-                        <div key={criteria.criteriaId} className="criteria">
-                            <div className="criteria-name">{criteria.criteriaName}</div>
-                            <div className="criteria-score">{criteria.criteriaValue} из 10</div>
+                        <div key={criteria.criteriaId} className="list-item">
+                            <span className="list-title">{criteria.criteriaName}</span>
+                            <span className="list-divider"></span>
+                            <span className="list-count">{criteria.criteriaValue} из 10</span>
                         </div>
                     ))}
                 </div>
