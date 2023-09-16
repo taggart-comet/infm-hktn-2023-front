@@ -113,11 +113,14 @@ const CriteriaList = ({onClose}) => {
     const { livingCompounds, setLivingCompounds } = useContext(AppContext);
 
     const moveItem = (fromIndex, toIndex) => {
-        const updatedList = [...criteriaList];
-        const [movedItem] = updatedList.splice(fromIndex, 1);
-        updatedList.splice(toIndex, 0, movedItem);
+        setCriteriaList(prevState => {
+            const updatedList = [...prevState];
+            const movedItem = updatedList[fromIndex];
+            updatedList.splice(fromIndex, 1);
+            updatedList.splice(toIndex, 0, movedItem);
 
-        setCriteriaList(updatedList.map((item, index) => ({ ...item, order: index + 1 })));
+            return updatedList.map((item, index) => ({ ...item, order: updatedList.length - index }));
+        });
     };
 
     const sendCriteriaList = () => {
@@ -139,7 +142,7 @@ const CriteriaList = ({onClose}) => {
 
     return (
         <div>
-            {criteriaList.map((criteria, index) => (
+            {criteriaList.sort((a, b) => b.order - a.order).map((criteria, index) => (
                 <CriteriaItem key={criteria.criteriaId} index={index} criteria={criteria} moveItem={moveItem} />
             ))}
             <div className="update-settings-button-container">
