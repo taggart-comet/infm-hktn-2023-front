@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {makeStyles} from "@material-ui/core";
 import RatingSetupButton from "../RatingSetupButton";
 import LivingCompoundItem from "./LivingCompoundItem";
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-function LeftMenu({ livingCompounds }) {
+function LeftMenu({ livingCompounds, AppSelectedCompound}) {
     const classes = useStyles();
     const [selectedCompound, setSelectedCompound] = useState(null);
 
@@ -32,6 +32,9 @@ function LeftMenu({ livingCompounds }) {
     const goBack = () => {
         setSelectedCompound(null);
     };
+    useEffect(() => {
+        setSelectedCompound(AppSelectedCompound);
+    }, [AppSelectedCompound]);
     return (
         <div className={classes.leftMenu}>
             <div className="left-menu-header">

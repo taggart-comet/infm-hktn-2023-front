@@ -8,6 +8,7 @@ import LeftMenu from "./components/LeftMenu/LeftMenu";
 function App() {
     const [needShowLCMap, setNeedShowLCMap] = useState(null);
     const [livingCompounds, setLivingCompounds] = useState([]);
+    const [selectedCompound, setSelectedCompound] = useState(null);
 
     useEffect(() => {
         // настоящий запрос
@@ -26,17 +27,20 @@ function App() {
     const handleShowLCMap = (flag) => {
         setNeedShowLCMap(flag);
     };
+    const handleSelectedCompound = (flag) => {
+        setSelectedCompound(flag);
+    };
 
     return (
         <div className="App">
             <div className="avito-header"></div>
             <div className="avito-map-area">
                 {needShowLCMap && (
-                    <MyMap livingCompounds={livingCompounds} />
+                    <MyMap livingCompounds={livingCompounds} selectCompound={handleSelectedCompound}/>
                 )}
             </div>
             {needShowLCMap && (
-                <LeftMenu livingCompounds={livingCompounds} />
+                <LeftMenu livingCompounds={livingCompounds} AppSelectedCompound={selectedCompound}/>
             )}
             <div className="avito-map-work-area">
                 <div className="avito-map-work-area-tools">

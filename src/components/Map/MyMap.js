@@ -2,7 +2,7 @@ import {Map, YMaps, Placemark, Clusterer} from "react-yandex-maps";
 import React from "react";
 
 
-function MyMap({ livingCompounds }) {
+function MyMap({ livingCompounds, selectCompound }) {
     return (
             <YMaps width="100%" height="100%" query={{apikey: '012caa6a-dbbf-4493-953f-263803e29812'}}>
                 <Map defaultState={{center: [55.75, 37.57], zoom: 13}} width="100%" height="100%">
@@ -26,6 +26,7 @@ function MyMap({ livingCompounds }) {
                                 iconImageSize: [50, 50],
                                 iconImageOffset: [-25, -25],
                             }}
+                            onClick={() => selectCompound(cpx)}
                         />
                     ))}
                     </Clusterer>
