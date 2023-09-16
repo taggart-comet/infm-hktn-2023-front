@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import {Button, makeStyles} from "@material-ui/core";
+import { AppContext } from '../../../App';
 
 const useStyles = makeStyles((theme) => ({
     customButton: {
@@ -50,7 +51,7 @@ const CriteriaItem = ({ criteria, index, moveItem }) => {
     );
 };
 
-const CriteriaList = () => {
+const CriteriaList = ({onClose}) => {
     const [criteriaList, setCriteriaList] = useState([
         {
             "criteriaId": 11,
@@ -109,6 +110,7 @@ const CriteriaList = () => {
         },
     ]);
     const classes = useStyles();
+    const { livingCompounds, setLivingCompounds } = useContext(AppContext);
 
     const moveItem = (fromIndex, toIndex) => {
         const updatedList = [...criteriaList];
@@ -127,10 +129,10 @@ const CriteriaList = () => {
             body: JSON.stringify({orders:criteriaList})
         })
             .then(response => response.json())
+            .then(data => setLivingCompounds(data))
             .then(
                 // закрыть попап
-
-                // передать стейт с ЖК на уровень App.js - c использование useEffect
+                onClose()
             )
             .catch(error => console.error('Error sending criteria:', error));
     }

@@ -42,7 +42,7 @@ function RatingSetupButton() {
                         <div className="left-menu-popup-hint">Переместите критерии, в зависимости от ваших предпочтений, <br/>чем выше критерий тем больше он влияет на оценку</div>
                     </div>
                     <DndProvider backend={HTML5Backend}>
-                        <CriteriaList />
+                        <CriteriaList onClose={() => setIsPopupOpen(false)}/>
                     </DndProvider>
                 </div>
             </LeftMenuPopup>
