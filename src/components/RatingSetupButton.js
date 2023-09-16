@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Popover, List, ListItem, makeStyles } from '@material-ui/core';
+import LeftMenuPopup from "./LeftMenu/Popup/LeftMenuPopup";
+import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import CriteriaList from "./LeftMenu/Popup/CriteriaList";
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 const useStyles = makeStyles((theme) => ({
     customButton: {
@@ -24,15 +28,25 @@ const useStyles = makeStyles((theme) => ({
 
 function RatingSetupButton() {
     const classes = useStyles();
-
-    const handleClick = (event) => {
-        console.log('clicked');
-    };
+    const [isPopupOpen, setIsPopupOpen] = useState(null);
 
     return (
-        <Button variant="contained" className={classes.customButton} onClick={handleClick}>
-            <i className="fas fa-user-cog" style={{marginRight: 0.5 + 'em'}}></i>Настройка оценок
-        </Button>
+        <div>
+            <Button variant="contained" className={classes.customButton} onClick={() => setIsPopupOpen(true)}>
+                <i className="fas fa-user-cog" style={{marginRight: 0.5 + 'em'}}></i>Настройка оценок
+            </Button>
+            <LeftMenuPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} >
+                <div>
+                    <div>
+                        <div className="left-menu-popup-header">Настройка оценок</div>
+                        <div className="left-menu-popup-hint">Переместите критерии, в зависимости от ваших предпочтений, <br/>чем выше критерий тем больше он влияет на оценку</div>
+                    </div>
+                    <DndProvider backend={HTML5Backend}>
+                        <CriteriaList />
+                    </DndProvider>
+                </div>
+            </LeftMenuPopup>
+        </div>
     );
 }
 
