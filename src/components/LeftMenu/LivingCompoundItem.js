@@ -1,10 +1,16 @@
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function LivingCompoundItem({ compound, onClick }) {
     return (
         <div className="living-compound-item" onClick={() => onClick(compound)}>
             <div className="compound-image-container">
-                <img className="compound-image" src={`https://uznai.mos.ru/_next/image?url=%2Fimages%2Fuploaded%2F${compound.Img}&w=1920&q=75`} alt={`${compound.Name}`} loading="lazy" />
+                <LazyLoadImage
+                    className="compound-image"
+                    src={`https://uznai.mos.ru/_next/image?url=%2Fimages%2Fuploaded%2F${compound.Img}&w=1920&q=75`}
+                    alt={`${compound.Name}`}
+                    effect="blur"
+                />
             </div>
             <div className="info">
                 <h4 className="title">{compound.Name}</h4>
